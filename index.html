@@ -4,6 +4,20 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-		test
+		<button id="cultivate" onclick="changeAction('cultivate')">Cultivate</button>
+		<br>
+		Energy: <span id="energy">0</span>
+		<br>
+		<button id="condense" onclick="upgradeEnergyGain(1)">Condense energy</button>
+		<br>
+		Condensation grade: <span id="energyGainGrade">0</span>
+		<br>
+		Condensation cost: <span id="energyGainUpgradeCost">10</span>
+		<br>
+		<button id="fight" onclick="changeAction('fight')">Fight</button>
+		<br>
+		Experience: <span id="experience">0</span>
+		<br>
+		<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>
