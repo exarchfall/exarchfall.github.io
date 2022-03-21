@@ -43,6 +43,15 @@ function loadGame()
 	if(typeof save1.experienceGainValue !== 'undefined') experienceGainValue = save1.experienceGainValue;
 	if(typeof save1.energyGainGrade !== 'undefined') energyGainGrade = save1.energyGainGrade;
 	if(typeof save1.experienceGainGrade !== 'undefined') experienceGainGrade = save1.experienceGainGrade;
+	updateAllElements();
+}
+
+function updateAllElements()
+{
+	document.getElementById("energy").innerHTML = energy;
+	document.getElementById("experience").innerHTML = experience;
+	document.getElementById("energyGainGrade").innerHTML = energyGainGrade;
+	document.getElementById("energyGainUpgradeCost").innerHTML = condenseNewCost;
 }
 
 function gainEnergy(value)
