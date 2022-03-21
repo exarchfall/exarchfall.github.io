@@ -72,4 +72,4 @@ function changeAction(newAction)
 window.setInterval(
 function(){
 	mainCycle();
-}, 1000);
+}, 250);
