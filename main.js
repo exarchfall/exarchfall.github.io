@@ -12,7 +12,7 @@ var experienceGainValue = 1;
 var energyGainGrade = 0;
 var experienceGainGrade = 0;
 
-var condenseNewCost;
+var condenseNewCost = 10;
 
 function saveData()
 {
@@ -24,7 +24,6 @@ function saveData()
 	experienceGainValue: experienceGainValue,
 	energyGainGrade: energyGainGrade,
 	experienceGainGrade: experienceGainGrade,
-	condenseNewCost: condenseNewCost
 	};
 	localStorage.setItem('save', JSON.stringify(save));
 }
@@ -44,7 +43,7 @@ function loadGame()
 	if(typeof save1.experienceGainValue !== 'undefined') experienceGainValue = save1.experienceGainValue;
 	if(typeof save1.energyGainGrade !== 'undefined') energyGainGrade = save1.energyGainGrade;
 	if(typeof save1.experienceGainGrade !== 'undefined') experienceGainGrade = save1.experienceGainGrade;
-	if(typeof save1.condenseNewCost !== 'undefined') condenseNewCost = save1.condenseNewCost;
+	condenseNewCost = Math.floor(10*Math.pow(1.1, energyGainGrade));
 	updateAllElements();
 }
 
