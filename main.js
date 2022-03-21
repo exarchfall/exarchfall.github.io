@@ -12,7 +12,11 @@ var experienceGainValue = 1;
 var energyGainGrade = 0;
 var experienceGainGrade = 0;
 
-var save = {
+
+
+function saveData()
+{
+	var save = {
 	modeActive: modeActive,
 	energy: energy,
 	experience: experience,
@@ -20,10 +24,7 @@ var save = {
 	experienceGainValue: experienceGainValue,
 	energyGainGrade: energyGainGrade,
 	experienceGainGrade: experienceGainGrade
-}
-
-function saveData()
-{
+	};
 	localStorage.setItem('save', JSON.stringify(save));
 }
 
